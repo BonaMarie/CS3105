@@ -20,5 +20,7 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('/dashboard/dashboard');
 });
-
+Route::get('/admin/product', function () {
+    return view('/dashboard/product');
+});
 // Route::view('/dashboard',);
