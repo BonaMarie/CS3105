@@ -15,3 +15,7 @@ require('./bootstrap');
 require('./components/Example');
 
 require('.components/Login');
+require('./components/navbar');
+require('./components/topbar');
+require('./components/content');
+
