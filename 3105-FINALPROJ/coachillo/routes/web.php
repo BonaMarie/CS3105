@@ -24,3 +24,7 @@ Route::get('/admin/product', function () {
     return view('/dashboard/product');
 });
 // Route::view('/dashboard',);
+
+Route::get('/landing', function () {
+    return view('landing');
+});
