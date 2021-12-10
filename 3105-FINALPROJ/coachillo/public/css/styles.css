@@ -11330,7 +11330,7 @@ body {
   z-index: 1038;
   transform: translateX(-225px);
 }
-#layoutSidenav {
+#layoutSidenav #layoutSidenav_content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11338,17 +11338,7 @@ body {
   min-width: 0;
   flex-grow: 1;
   min-height: calc(100vh - 56px);
-}
-
-#layoutSidenav_content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 0;
-  flex-grow: 1;
-  min-height: calc(100vh - 56px);
-  margin-left:225px;
+  margin-left: -225px;
 }
 
 .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
@@ -11709,5 +11699,3 @@ body {
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
 }
-
-
