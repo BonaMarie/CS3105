@@ -20,7 +20,7 @@
         </style>
     </head>
     <body>
-        <div id="example"></div>
+        <div id="login"></div>
 
         <script src="{{asset('js/app.js')}}"></script>
     </body>
