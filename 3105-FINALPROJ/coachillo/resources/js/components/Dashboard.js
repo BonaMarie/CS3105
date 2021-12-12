@@ -78,7 +78,7 @@ function Dashboard(props) {
                     <div className="card bg-danger card-img-holder text-white">
                     <div className="card-body">
                         <img src="/assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image"/>
-                        <h4 className="font-weight-normal mb-3">Total Leads <i className="mdi mdi-chart-line mdi-24px float-right"></i>
+                        <h4 className="font-weight-normal mb-3">Total Clients<i className="mdi mdi-chart-line mdi-24px float-right"></i>
                         </h4>
                         <h2 className="mb-5">{state.totalLeads}</h2>
                     </div>
@@ -88,7 +88,7 @@ function Dashboard(props) {
                     <div className="card bg-gradient-info card-img-holder text-white">
                     <div className="card-body">
                         <img src="/assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" />
-                        <h4 className="font-weight-normal mb-3">New Leads This Week <i className="mdi mdi-calendar-text mdi-24px float-right"></i>
+                        <h4 className="font-weight-normal mb-3">New Clients This Week <i className="mdi mdi-calendar-text mdi-24px float-right"></i>
                         </h4>
                         <h2 className="mb-5">{state.weeklyLeads}</h2>
                     </div>
@@ -98,7 +98,7 @@ function Dashboard(props) {
                     <div className="card bg-green-gradient card-img-holder text-white">
                     <div className="card-body">
                         <img src="/assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" />
-                        <h4 className="font-weight-normal mb-3">New Leads This Month <i className="mdi mdi-calendar-multiple-check mdi-24px float-right"></i>
+                        <h4 className="font-weight-normal mb-3">New Clients This Month <i className="mdi mdi-calendar-multiple-check mdi-24px float-right"></i>
                         </h4>
                         <h2 className="mb-5">{state.monthlyLeads}</h2>
                     </div>
@@ -109,7 +109,7 @@ function Dashboard(props) {
               <div className="col-12 grid-margin">
                 <div className="card">
                     <div className="card-body animated fadeIn">
-                        <h4 className="card-title">Recent Leads</h4>
+                        <h4 className="card-title">Recent Clients</h4>
                         <div className="table-responsive">
                         <table className="table">
                             <thead>
