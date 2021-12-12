@@ -67145,7 +67145,19 @@ function Dashboard(props) {
       setState = _useState2[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-   
+    if (typeof window !== "undefined") {
+      var iziToast = __webpack_require__(/*! iziToast */ "./node_modules/iziToast/dist/js/iziToast.js");
+
+      iziToast.show({
+        timeout: 0,
+        progressBar: false,
+        displayMode: 'once',
+        theme: 'light',
+        id: 'star-notification',
+        title: '<a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/react-laravel"><img src="https://img.shields.io/github/stars/arifszn/react-laravel?style=social" alt="Github Star"/></a>',
+        message: 'We need your support. Please ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/react-laravel">GitHub</a> to help us increase.'
+      });
+    }
 
     props.setActiveComponentProp('Dashboard');
     loadData();
