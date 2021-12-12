@@ -16,25 +16,6 @@ function Dashboard(props) {
        loading: false
     });
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const iziToast = require('iziToast');
-
-            iziToast.show({
-                timeout: 0,
-                progressBar: false,
-                displayMode: 'once',
-                theme: 'light',
-                id: 'star-notification',
-                title: '<a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/react-laravel"><img src="https://img.shields.io/github/stars/arifszn/react-laravel?style=social" alt="Github Star"/></a>',
-                message: 'We need your support. Please ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/react-laravel">GitHub</a> to help us increase.'
-            });
-        }
-        
-        props.setActiveComponentProp('Dashboard');
-        loadData();
-    }, []);
-
     const loadData = () => {
         setState({
             ...state,
@@ -65,7 +46,7 @@ function Dashboard(props) {
     };
 
     const showRecentLeads = () => {
-        return state.recentLeads.length == 0 ? <tr><td className="text-muted lead">No Recent Lead</td></tr> : 
+        return state.recentLeads.length == 0 ? <tr><td className="text-muted lead">No Recent Lead</td></tr> :
                 state.recentLeads.map((lead, i) => {
                     return <tr key={i}>
                                 <td>
@@ -91,7 +72,7 @@ function Dashboard(props) {
 				 	Dashboard
 				</h3>
 			</div>
-			
+
             <div className="row animated fadeIn">
                 <div className="col-md-4 stretch-card grid-margin">
                     <div className="card bg-danger card-img-holder text-white">
@@ -162,9 +143,9 @@ const mapStateToProps = (state) => {
 }
 
 /**
- * redux state can be change by calling 'props.setAuthUserProp('demo user');' when 
+ * redux state can be change by calling 'props.setAuthUserProp('demo user');' when
  * applicable(Optional to )
- * 
+ *
  */
 const mapDispatchToProps = (dispatch) => {
     return {
