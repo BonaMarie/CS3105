@@ -12,19 +12,37 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/clearapp', function () {
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    Artisan::call('view:clear');
+    Session::flush();
+    return redirect('/');
 });
 
-Route::get('/admin', function () {
-    return view('/dashboard/dashboard');
-});
-Route::get('/admin/product', function () {
-    return view('/dashboard/product');
-});
-// Route::view('/dashboard',);
 
-Route::get('/landing', function () {
-    return view('landing');
+Route::group(['middleware' => ['guest', 'web']], function () {
+    Route::get('/', 'AuthController@redirectToIndex');
+
+    //react route
+    Route::get('/login', 'AuthController@index')->name('Login');
+    Route::get('/registration', 'AuthController@index')->name('Registration');
+
+    Route::post('/login', 'AuthController@login');
+    Route::post('/registration', 'AuthController@signup');
 });
+
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/logout', 'HomeController@logout')->name('Logout');
+    Route::get('/home', 'HomeController@index')->name('Dashboard');
+    
+    //react route
+    Route::get('/lead/list', 'LeadController@index')->name('Leads');
+    Route::get('/lead/new', 'LeadController@index')->name('NewLead');
+    Route::get('/lead/edit/{id}', 'LeadController@index')->name('EditLead');
+
+
+});
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
