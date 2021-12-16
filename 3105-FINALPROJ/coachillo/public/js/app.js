@@ -2459,9 +2459,41 @@ function Navbar() {
                   className: "fas fa-tachometer-alt"
                 })
               }), "Dashboard"]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
+              className: "nav-link collapsed",
+              href: "#",
+              "data-bs-toggle": "collapse",
+              "data-bs-target": "#calculator_link",
+              "aria-expanded": "false",
+              "aria-controls": "collapseLayouts",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                className: "sb-nav-link-icon",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "fas fa-calculator"
+                })
+              }), "Calculator", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                className: "sb-sidenav-collapse-arrow",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  className: "fas fa-angle-down"
+                })
+              })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: "sb-sidenav-menu-heading",
-              children: "Interface"
+              className: "collapse",
+              id: "calculator_link",
+              "aria-labelledby": "headingOne",
+              "data-bs-parent": "#sidenavAccordion",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("nav", {
+                className: "sb-sidenav-menu-nested nav",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                  className: "nav-link",
+                  href: "layout-static.html",
+                  children: "Volume Points Calculator"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                  className: "nav-link",
+                  href: "layout-sidenav-light.html",
+                  children: "History"
+                })]
+              })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
               className: "nav-link collapsed",
               href: "#",
@@ -2480,41 +2512,6 @@ function Navbar() {
                   className: "fas fa-angle-down"
                 })
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
-              className: "nav-link collapsed",
-              href: "#",
-              "data-bs-toggle": "collapse",
-              "data-bs-target": "#collapseLayouts",
-              "aria-expanded": "false",
-              "aria-controls": "collapseLayouts",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                className: "sb-nav-link-icon",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-                  className: "fas fa-table"
-                })
-              }), "Volume Point Calculator", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                className: "sb-sidenav-collapse-arrow",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-                  className: "fas fa-angle-down"
-                })
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: "collapse",
-              id: "collapseLayouts",
-              "aria-labelledby": "headingOne",
-              "data-bs-parent": "#sidenavAccordion",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("nav", {
-                className: "sb-sidenav-menu-nested nav",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-                  className: "nav-link",
-                  href: "layout-static.html",
-                  children: "Static Navigation"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-                  className: "nav-link",
-                  href: "layout-sidenav-light.html",
-                  children: "Light Sidenav"
-                })]
-              })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
               className: "nav-link collapsed",
               href: "#",
@@ -2611,18 +2608,6 @@ function Navbar() {
                   })
                 })]
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: "sb-sidenav-menu-heading",
-              children: "Addons"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
-              className: "nav-link",
-              href: "charts.html",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                className: "sb-nav-link-icon",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-                  className: "fas fa-chart-area"
-                })
-              }), "Charts"]
             })]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {

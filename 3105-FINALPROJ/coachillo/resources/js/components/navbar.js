@@ -13,23 +13,24 @@ function Navbar() {
                                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <div className="sb-sidenav-menu-heading">Interface</div>
+                            <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#calculator_link" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div className="sb-nav-link-icon"><i className="fas fa-calculator"></i></div>
+                                Calculator
+                                <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                            </a>
+                            <div className="collapse" id="calculator_link" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav className="sb-sidenav-menu-nested nav">
+                                    <a className="nav-link" href="layout-static.html">Volume Points Calculator</a>
+                                    <a className="nav-link" href="layout-sidenav-light.html">History</a>
+                                </nav>
+                            </div>
+
                             <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div className="sb-nav-link-icon"><i className="fas fa-columns"></i></div>
                                 Product
                                 <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
                             </a>
-                            <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div className="sb-nav-link-icon"><i className="fas fa-table"></i></div>
-                                Volume Point Calculator
-                                <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
-                            </a>
-                            <div className="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav className="sb-sidenav-menu-nested nav">
-                                    <a className="nav-link" href="layout-static.html">Static Navigation</a>
-                                    <a className="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
-                                </nav>
-                            </div>
+                            
                             <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div className="sb-nav-link-icon"><i className="fas fa-user"></i></div>
                                 Client
@@ -61,11 +62,7 @@ function Navbar() {
                                     </div>
                                 </nav>
                             </div>
-                            <div className="sb-sidenav-menu-heading">Addons</div>
-                            <a className="nav-link" href="charts.html">
-                                <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
+                        
 
                         </div>
                     </div>
