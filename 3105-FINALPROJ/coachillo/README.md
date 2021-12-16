@@ -1,66 +1,131 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# About Laravel React Admin
+
+This is a scaffolding project that comes with authentication &
+users CRUD. It is a Single Page Application (SPA) built on top of [React.js](https://reactjs.org)
+in the frontend & [Laravel](https://laravel.com) in the backend.
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <a href="https://github.com/palonponjovertlota/laravel-react-admin/actions" title="Actions">
+        <img src="https://github.com/palonponjovertlota/laravel-react-admin/workflows/Actions/badge.svg" alt="Build Status">
+    </a>
+    <a href="https://github.com/palonponjovertlota/laravel-react-admin/releases" title="Releases">
+        <img src="https://img.shields.io/github/v/release/palonponjovertlota/laravel-react-admin?label=Release" alt="Latest Version">
+    </a>
+    <a href="https://github.com/palonponjovertlota/laravel-react-admin/blob/master/LICENSE" title="License">
+        <img src="https://img.shields.io/github/license/palonponjovertlota/laravel-react-admin?label=License" alt="License">
+    </a>
 </p>
 
-## About Laravel
+## Screenshots
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[![Laravel React Admin](https://user-images.githubusercontent.com/42484695/65893634-d9534700-e3da-11e9-84a1-20de8c6b4ced.png)](https://github.com/palonponjovertlota/laravel-react-admin)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![Laravel React Admin](https://user-images.githubusercontent.com/42484695/65893636-d9534700-e3da-11e9-91c1-0d098a5e4301.png)](https://github.com/palonponjovertlota/laravel-react-admin)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+-   Progressive Web App (PWA)
+-   Supports multiple locales
+-   Stateless authentication system
+-   Datatables with server-side pagination, sorting & dynamic filtering
+-   Undo common actions
+-   [Docker](https://www.docker.com) ready
+-   [Image Intervention](http://image.intervention.io/) integration for image uploads
+-   Drag & drop file uploads.
+-   Supports dark mode.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Preview
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+You can check out the [live preview](https://laravel-react-admin.herokuapp.com)
 
-## Laravel Sponsors
+## Quick Start
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clone the repo `git clone https://github.com/palonponjovertlota/laravel-react-admin.git`.
+2. Go to your project folder from your terminal.
+3. Run: `composer install` and `npm install` to install application dependencies.
+4. Copy the `env.example` file into a `.env` file and then configure based on your local setup.
+5. Installation is done, you can now run: `php artisan serve` then `npm run watch`.
+6. The project will run in this URL: (http://localhost:3000).
 
-### Premium Partners
+## Using Docker
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+If you prefer [Docker](https://www.docker.com), there is a working setup provided to get you started in no time.
+Check your local setup to make sure that running this app in docker will work correctly:
+
+### For Unix Based Operating Systems, Give It Proper Permissions
+
+If you are a **Linux** / **Mac** user, make sure to give the application proper _file permissions_. The _php-fpm_ image uses `www-data` as its default user:
+
+```
+cd ~/your_projects_folder
+
+sudo chown ${USER}:www-data -R laravel-react-admin
+```
+
+### Localhost Should Be Freed
+
+Make sure that the address `127.0.0.1:80` usually `localhost` is available on the _host machine_. It must be assured that **apache2**, **nginx** or any http webserver out there is not running on the _host machine_ to avoid address and port collision.
+
+### Add a custom host
+
+To make this app run on **docker** you must add a custom host address pointing to `localhost` or `127.0.0.1`.
+
+### You are good to go
+
+You can now run the _image_ using the `docker-compose up` and optionally pass the `--build` flag if you intend to build the image. The app can be visited here `http:your_custom_host_address`.
+
+### Installing PHP & NPM dependencies
+
+In development, do note that all files inside this app is _bind-mounted_ into the container, **docker** will just use the existing directories, in our concern the `vendor` and `node_modules`. Here is an example of running a composer install command: `docker container exec -it laravel-react-admin-php-fpm composer install --no-interaction --no-plugins --no-scripts`.
+
+### Running Artisan Commands
+
+You can run any artisan commands directly into the `laravel-react-admin-php-fpm` container. Here is an example of a migration command: `docker container exec -it laravel-react-admin-php-fpm php artisan migrate:fresh --seed`.
+
+### What about Browsersync?
+
+As we are bundling frontend assets with [webpack](https://webpack.js.org/) under the hood, you must specify the custom host address where the application runs in docker so that webpack can proxy that to be able to develop using docker. You can pass a `--env.proxy` flag when running for example the `npm run watch` command: `npm run watch -- --env.proxy=http:laravel-react-admin.test`.
+
+### Using PhpMyAdmin
+
+You could use **PhpMyAdmin** to browse your MySql database as it is included in this **Docker** integration. Just add a _Virtual Host_ that points to `127.0.0.1` & the _Domain_ should be the same with your custom host address:
+
+```
+// /etc/hosts
+
+127.0.0.1    phpmyadmin.laravel-react-admin.test
+```
+
+You could then visit **PhpMyAdmin** here: phpmyadmin.laravel-react-admin.test
+
+## Testing
+
+Run the tests with:
+
+```
+// If you have installed composer globally
+composer test
+
+// This should also work
+./vendor/bin/composer test
+```
+
+## Changelog
+
+Please see [CHANGELOG](https://github.com/palonponjovertlota/laravel-react-admin/blob/master/CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Please see [Contributing](https://github.com/palonponjovertlota/laravel-react-admin/blob/master/Contributing.md) for more details.
 
-## Code of Conduct
+## Security
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+If you discover any security-related issues, please email [palonponjovertlota@gmail.com](mailto:palonponjovertlota@gmail.com) instead of using the issue tracker.
 
-## Security Vulnerabilities
+## Credits
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   [@reeshkeed](https://github.com/reeshkeed) for designing the logo & design ideas.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The MIT License (MIT). Please see [License File](https://github.com/palonponjovertlota/laravel-react-admin/blob/master/LICENSE) for more information.

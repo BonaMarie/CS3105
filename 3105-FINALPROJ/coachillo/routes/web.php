@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,37 +10,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/clearapp', function () {
-    Artisan::call('config:clear');
-    Artisan::call('cache:clear');
-    Artisan::call('view:clear');
-    Session::flush();
-    return redirect('/');
+
+Route::prefix('/{locale?}')->where(['locale' => 'en|fil'])->group(function () {
+    Route::name('backoffice.')->group(function () {
+        Route::get('/', function () {
+            return view('__backoffice.welcome');
+        })->name('welcome');
+    });
 });
-
-
-Route::group(['middleware' => ['guest', 'web']], function () {
-    Route::get('/', 'AuthController@redirectToIndex');
-
-    //react route
-    Route::get('/login', 'AuthController@index')->name('Login');
-    Route::get('/registration', 'AuthController@index')->name('Registration');
-
-    Route::post('/login', 'AuthController@login');
-    Route::post('/registration', 'AuthController@signup');
-});
-
-
-Route::group(['middleware' => ['auth']], function () {
-    Route::get('/logout', 'HomeController@logout')->name('Logout');
-    Route::get('/home', 'HomeController@index')->name('Dashboard');
-    
-    //react route
-    Route::get('/lead/list', 'LeadController@index')->name('Leads');
-    Route::get('/lead/new', 'LeadController@index')->name('NewLead');
-    Route::get('/lead/edit/{id}', 'LeadController@index')->name('EditLead');
-
-
-});
-
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

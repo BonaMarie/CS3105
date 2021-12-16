@@ -2,22 +2,25 @@
 
 namespace App;
 
+use App\Traits\HasJWT;
+use App\Contracts\Uploader;
+use App\Traits\UploadsFiles;
+use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject, Uploader
 {
-    use Notifiable;
+    use Notifiable, SoftDeletes, HasJWT, UploadsFiles;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -29,11 +32,37 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast to native types.
+     * The attributes used for uploads.
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
+    protected $uploadAttributes = [
+        'directory',
+        'filename',
+        'original_filename',
+        'filesize',
+        'thumbnail_filesize',
+        'url',
+        'thumbnail_url'
     ];
+
+    /**
+     * Get the directory for uploads.
+     *
+     * @return string
+     */
+    public function getDirectory() : string
+    {
+        return 'users/'.$this->getKey();
+    }
+
+    /**
+     * Get the upload attributes
+     *
+     * @return array
+     */
+    public function getUploadAttributes() : array
+    {
+        return $this->uploadAttributes;
+    }
 }
