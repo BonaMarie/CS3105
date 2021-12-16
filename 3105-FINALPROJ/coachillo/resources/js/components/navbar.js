@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 function Navbar() {
     return (
         <div className="container">
-            
             <div id="layoutSidenav_nav">
                 <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div className="sb-sidenav-menu">

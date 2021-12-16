@@ -14,13 +14,10 @@
 
     <body class="sb-nav-fixed">
         <div id="topbar"></div>
-
         <div id="layoutSidenav">
-
             <div id="navbar"></div>
             <div id="content"></div>
         </div>
-        
     </body>
     
     <script src="{{asset('js/app.js')}}"></script>

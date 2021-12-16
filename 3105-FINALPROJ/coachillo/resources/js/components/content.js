@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 
 function Content() {
     return (
-        <div className="container">
             <div id="layoutSidenav_content">
-                <div>
                     <div className="container-fluid px-4">
                         <h1 className="mt-4">Dashboard</h1>
                         <ol className="breadcrumb mb-4">
@@ -186,8 +184,6 @@ function Content() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     );
 }
 
