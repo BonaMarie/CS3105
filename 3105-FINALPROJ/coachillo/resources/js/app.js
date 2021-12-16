@@ -14,3 +14,4 @@ require('./bootstrap');
 require('./components/navbar');
 require('./components/topbar');
 require('./components/content');
+require('./components/admin');

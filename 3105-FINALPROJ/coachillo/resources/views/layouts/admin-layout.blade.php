@@ -13,11 +13,7 @@
     </head>
 
     <body class="sb-nav-fixed">
-        <div id="topbar"></div>
-        <div id="layoutSidenav">
-            <div id="navbar"></div>
-            <div id="content"></div>
-        </div>
+        <div id="admin"></div>
     </body>
     
     <script src="{{asset('js/app.js')}}"></script>
