@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 function Content() {
     return (
-            <div id="layoutSidenav_content">
-                    <div className="container-fluid px-4">
+        <div id="layoutSidenav_content">
+            <div className="container-fluid px-4">
                         <h1 className="mt-4">Dashboard</h1>
                         <ol className="breadcrumb mb-4">
                             <li className="breadcrumb-item active">Dashboard</li>
@@ -182,13 +182,9 @@ function Content() {
 
                             </div>
                         </div>
-                    </div>
-                </div>
+            </div>
+        </div>
     );
 }
 
 export default Content;
-
-if (document.getElementById('content')) {
-    ReactDOM.render(<Content />, document.getElementById('content'));
-}
