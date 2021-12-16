@@ -21,7 +21,7 @@ class AuthController extends Controller
     {
         return Redirect(route('Login'));
     }
-
+    
     public function signup(Request $request)
     {
         $validate = Validator::make($request->all(), [
@@ -44,7 +44,7 @@ class AuthController extends Controller
             'api_token' => Str::random(80),
         ]);
         $user->save();
-
+        
         $token = Str::random(80);
 
         $user->forceFill([
@@ -52,19 +52,19 @@ class AuthController extends Controller
         ])->save();
 
         $credentials = request(['email', 'password']);
-
+        
         if(!Auth::guard('users')->attempt($credentials))
             return response()->json([
                 'message' => 'Invalid email or password',
                 'status' => 'error'
             ], 401);
-
+        
         return response()->json([
             'message' => $user->api_token,
             'status' => 'success'
         ], 201);
     }
-
+  
     public function login(Request $request)
     {
         $validate = Validator::make($request->all(), [
@@ -80,25 +80,25 @@ class AuthController extends Controller
         }
 
         $credentials = request(['email', 'password']);
-
+        
         if(!Auth::guard('users')->attempt($credentials))
             return response()->json([
                 'message' => 'Invalid email or password',
                 'status' => 'error'
             ], 401);
         $user = $request->user();
-
+        
         return response()->json([
             'message' => $user->api_token,
             'status' => 'success'
         ], 201);
     }
-
+  
     public function logout(Request $request)
     {
     }
-
-
+  
+    
     public function user(Request $request)
     {
         return response()->json([
